@@ -109,7 +109,7 @@
           type: "GET",
           //YOUR TURN: Replace with csv export link
           url:
-            "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7q7gveQSjnfAlZ6jiZMVzHObPQHwg2fRI43StrlvQt5RGRqNPbUWh78ujhHV7KzPU5etSxJNV2Nuw/pubhtml?gid=0&single=true",
+            "https://cors-anywhere.herokuapp.com/https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7q7gveQSjnfAlZ6jiZMVzHObPQHwg2fRI43StrlvQt5RGRqNPbUWh78ujhHV7KzPU5etSxJNV2Nuw/pub?gid=0&single=true&output=csv",
           dataType: "text",
           success: function (csvData) {
             makeGeoJSON(csvData);
