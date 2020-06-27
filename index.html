@@ -98,9 +98,9 @@
         "pk.eyJ1Ijoic3RhcmJvYXJkZGV2IiwiYSI6ImNrYTB4c3JjZjA2ZXczbW4ycmc4a3huNDIifQ.GY1Rj4kD_AwiZEM3fM-8TA"; //Mapbox token
       var map = new mapboxgl.Map({
         container: "map", // container id
-        style: "mapbox://styles/mapbox/streets-v11", //stylesheet location
+        style: "mapbox://styles/starboarddev/ckbx7evmj1tqr1iocktirdgby", //stylesheet location
         center: [-122.411464, 37.7852299], // starting position
-        zoom: 2, // starting zoom
+        zoom: 10, // starting zoom
         transformRequest: transformRequest,
       });
 
@@ -109,7 +109,7 @@
           type: "GET",
           //YOUR TURN: Replace with csv export link
           url:
-            "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7q7gveQSjnfAlZ6jiZMVzHObPQHwg2fRI43StrlvQt5RGRqNPbUWh78ujhHV7KzPU5etSxJNV2Nuw/pubhtml",
+            "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7q7gveQSjnfAlZ6jiZMVzHObPQHwg2fRI43StrlvQt5RGRqNPbUWh78ujhHV7KzPU5etSxJNV2Nuw/pub?gid=0&single=true&output=csv",
           dataType: "text",
           success: function (csvData) {
             makeGeoJSON(csvData);
@@ -163,12 +163,6 @@
                     `Phone: ` +
                     `</b>` +
                     e.features[0].properties.Phone +
-                    `</h4>` +
-                    `<h4>` +
-                    `<b>` +
-                    `Website: ` +
-                    `</b>` +
-                    e.features[0].properties.Website +
                     `</h4>`;
 
                   // Ensure that if the map is zoomed out such that multiple
