@@ -109,7 +109,7 @@
           type: "GET",
           //YOUR TURN: Replace with csv export link
           url:
-            "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7q7gveQSjnfAlZ6jiZMVzHObPQHwg2fRI43StrlvQt5RGRqNPbUWh78ujhHV7KzPU5etSxJNV2Nuw/pub?gid=0&single=true&output=csv&callback=googleDocCallback",
+            "https://docs.google.com/spreadsheets/d/1yynctHDvs6UmDvhMPGRInTUfpDzS74s4AsR0JzIArZQ/",
           dataType: "text",
           success: function (csvData) {
             makeGeoJSON(csvData);
@@ -198,10 +198,6 @@
           );
         }
       });
-
-      window.googleDocCallback = function () {
-        return true;
-      };
     </script>
   </body>
 </html>
