@@ -109,7 +109,10 @@
 
       // Initialize D3 to access your table
       function init() {
-        d3.csv("s3://sheetmapper-bucket-stb/dealers.csv", addPoints);
+        d3.csv(
+          "https://sheetmapper-bucket-stb.s3-ap-southeast-1.amazonaws.com/dealers.csv",
+          addPoints
+        );
       }
 
       // create a function called addPoints that iterates through your table (row by row) to create markers and popups
