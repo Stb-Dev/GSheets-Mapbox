@@ -99,7 +99,7 @@
         container: "map", // container id
         style: "mapbox://styles/starboarddev/ckbx7evmj1tqr1iocktirdgby", //YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
         center: [-122.411464, 37.7852299], // starting position [lng, lat]
-        zoom: 9, // starting zoom
+        zoom: 3, // starting zoom
         transformRequest: transformRequest,
       });
 
@@ -107,7 +107,7 @@
         init();
       });
 
-      // Initialize D3 to access your table
+      // Initialize D3 to access SUP dealer info
       function init() {
         d3.csv(
           "https://sheetmapper-bucket-stb.s3-ap-southeast-1.amazonaws.com/dealers.csv",
